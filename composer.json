@@ -1,0 +1,61 @@
+{
+    "name": "php-static-analysis/phpstan-extension",
+    "description": "PHPStan extension to read static analysis attributes",
+    "type": "phpstan-extension",
+    "keywords": ["dev", "static analysis"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpStaticAnalysis\\PHPStanExtension\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "test\\PhpStaticAnalysis\\PHPStanExtension\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Granados",
+            "email": "carlos@fastdebug.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0",
+        "php-static-analysis/attributes": "^0.1 || dev-main",
+        "php-static-analysis/node-visitor": "^0.1 || dev-main",
+        "phpstan/phpstan": "^1.8"
+    },
+    "require-dev": {
+        "php-static-analysis/psalm-plugin": "dev-main",
+        "phpunit/phpunit": "^9.0",
+        "symplify/easy-coding-standard": "^12.1",
+        "vimeo/psalm": "^5"
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse",
+        "phpstan-debug": "phpstan analyse --xdebug --debug",
+        "ecs": "ecs",
+        "ecs-fix": "ecs --fix",
+        "phpunit": "phpunit",
+        "psalm": "psalm",
+        "tests": [
+            "@ecs",
+            "@phpstan",
+            "@phpunit",
+            "@psalm"
+        ]
+    }
+}

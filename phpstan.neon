@@ -1,0 +1,18 @@
+includes:
+    - extension.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - tests/data/*
+    ignoreErrors:
+        -
+            message: '#^Accessing [a-zA-Z\\]+::class is not covered by backward compatibility promise. The class might change in a minor PHPStan version.$#'
+            path: tests/BaseAttributeTestCase.php
+        -
+            message: '#^Calling [a-zA-Z\\]+::[a-zA-Z]+\(\) is not covered by backward compatibility promise. The method might change in a minor PHPStan version.$#'
+            path: tests/BaseAttributeTestCase.php

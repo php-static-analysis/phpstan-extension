@@ -1,0 +1,13 @@
+services:
+	attributeParser:
+		class: PhpStaticAnalysis\PHPStanExtension\Parser\AttributeParser
+		arguments:
+			parser: @pathRoutingParser
+		autowired: false
+
+	defaultAnalysisParser:
+		class: PHPStan\Parser\CachedParser
+		arguments:
+			originalParser: @attributeParser
+			cachedNodesByStringCountMax: %cache.nodesByStringCountMax%
+		autowired: false
