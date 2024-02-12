@@ -65,4 +65,27 @@ class MethodParamAttribute
     {
         return count($names);
     }
+
+    public function countNamesInParam(
+        #[Param('string[]')]
+        array $names
+    ): int {
+        return count($names);
+    }
+
+    public function countNamesInParamWithName(
+        #[Param(names: 'string[]')]
+        array $names
+    ): int {
+        return count($names);
+    }
+
+    public function countNamesInTwoParams(
+        #[Param('string[]')]
+        array $names1,
+        #[Param('string[]')]
+        array $names2
+    ): int {
+        return count($names1) + count($names2);
+    }
 }
