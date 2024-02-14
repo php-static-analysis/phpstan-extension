@@ -16,4 +16,10 @@ class PropertyTypeAttribute
      * @var string
      */
     public string $string;
+
+    #[Type('string')]
+    public function getString(): string
+    {
+        return 'hello';
+    }
 }

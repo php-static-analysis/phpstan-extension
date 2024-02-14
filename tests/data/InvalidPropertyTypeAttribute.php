@@ -4,6 +4,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data;
 
 use PhpStaticAnalysis\Attributes\Type;
 
+#[Type('string')]
 class InvalidPropertyTypeAttribute
 {
     #[Type(0)]
@@ -18,10 +19,4 @@ class InvalidPropertyTypeAttribute
 
     #[Type('$a + $b')]
     public string $andAnotherinvalidProperty;
-
-    #[Type('string')]
-    public function getString(): string
-    {
-        return 'hello';
-    }
 }
