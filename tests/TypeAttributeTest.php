@@ -6,13 +6,13 @@ class TypeAttributeTest extends BaseAttributeTestCase
 {
     public function testPropertyTypeAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/PropertyTypeAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Type/PropertyTypeAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInvalidPropertyTypeAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidPropertyTypeAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Type/InvalidPropertyTypeAttribute.php');
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\Type does not have the class target.' => 7,

@@ -6,19 +6,19 @@ class ParamAttributeTest extends BaseAttributeTestCase
 {
     public function testMethodParamAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/MethodParamAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Param/MethodParamAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testFunctionParamAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/FunctionParamAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Param/FunctionParamAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInvalidMethodReturnsAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidMethodParamAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Param/InvalidMethodParamAttribute.php');
 
         $expectedErrors = [
             'PHPDoc tag @param has invalid value (): Unexpected token "\n ", expected type at offset 13' => 9,

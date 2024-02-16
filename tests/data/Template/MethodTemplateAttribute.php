@@ -1,6 +1,6 @@
 <?php
 
-namespace test\PhpStaticAnalysis\PHPStanExtension\data;
+namespace test\PhpStaticAnalysis\PHPStanExtension\data\Template;
 
 use Exception;
 use PhpStaticAnalysis\Attributes\Param;

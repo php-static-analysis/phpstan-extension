@@ -6,9 +6,9 @@ class IsReadOnlyAttributeTest extends BaseAttributeTestCase
 {
     public function testPropertyTypeAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/PropertyIsReadOnlyAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/IsReadOnly/PropertyIsReadOnlyAttribute.php');
         $expectedErrors = [
-            '@readonly property test\PhpStaticAnalysis\PHPStanExtension\data\PropertyIsReadOnlyAttribute::$name is assigned outside of its declaring class.' => 19,
+            '@readonly property test\PhpStaticAnalysis\PHPStanExtension\data\IsReadOnly\PropertyIsReadOnlyAttribute::$name is assigned outside of its declaring class.' => 19,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);
@@ -16,7 +16,7 @@ class IsReadOnlyAttributeTest extends BaseAttributeTestCase
 
     public function testInvalidPropertyIsReadOnlyAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidPropertyIsReadOnlyAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/IsReadOnly/InvalidPropertyIsReadOnlyAttribute.php');
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\IsReadOnly constructor invoked with 1 parameter, 0 required.' => 9,

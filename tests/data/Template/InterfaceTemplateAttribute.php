@@ -1,18 +1,15 @@
 <?php
 
-namespace test\PhpStaticAnalysis\PHPStanExtension\data;
+namespace test\PhpStaticAnalysis\PHPStanExtension\data\Template;
 
 use PhpStaticAnalysis\Attributes\Param;
 use PhpStaticAnalysis\Attributes\Returns;
 use PhpStaticAnalysis\Attributes\Template;
 
 #[Template('T')]
-trait TraitTemplateAttribute
+interface InterfaceTemplateAttribute
 {
     #[Param(param: 'T')]
     #[Returns('T')]
-    public function returnTemplate($param)
-    {
-        return $param;
-    }
+    public function returnTemplate($param);
 }

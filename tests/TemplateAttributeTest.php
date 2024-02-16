@@ -6,37 +6,37 @@ class TemplateAttributeTest extends BaseAttributeTestCase
 {
     public function testClassTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/ClassTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/ClassTemplateAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testTraitTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/TraitTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/TraitTemplateAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInterfaceTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InterfaceTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/InterfaceTemplateAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testMethodTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/MethodTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/MethodTemplateAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testFunctionTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/FunctionTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/FunctionTemplateAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInvalidMethodTemplateAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidMethodTemplateAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Template/InvalidMethodTemplateAttribute.php');
 
         $expectedErrors = [
             'PHPDoc tag @template has invalid value (): Unexpected token "\n ", expected type at offset 16' => 11,

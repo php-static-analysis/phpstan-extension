@@ -6,13 +6,13 @@ class PropertyAttributeTest extends BaseAttributeTestCase
 {
     public function testClassPropertyAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/ClassPropertyAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Property/ClassPropertyAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInvalidClassPropertyAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidClassPropertyAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Property/InvalidClassPropertyAttribute.php');
 
         $expectedErrors = [
             'PHPDoc tag @property has invalid value (): Unexpected token "\n * ", expected type at offset 16' => 7,

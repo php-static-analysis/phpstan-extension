@@ -6,19 +6,19 @@ class ReturnsAttributeTest extends BaseAttributeTestCase
 {
     public function testMethodReturnsAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/MethodReturnsAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Returns/MethodReturnsAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testFunctionReturnsAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/FunctionReturnsAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Returns/FunctionReturnsAttribute.php');
         $this->assertCount(0, $errors);
     }
 
     public function testInvalidMethodReturnsAttribute(): void
     {
-        $errors = $this->analyse(__DIR__ . '/data/InvalidMethodReturnsAttribute.php');
+        $errors = $this->analyse(__DIR__ . '/data/Returns/InvalidMethodReturnsAttribute.php');
 
         $expectedErrors = [
             'PHPDoc tag @return has invalid value (): Unexpected token "\n ", expected type at offset 14' => 9,

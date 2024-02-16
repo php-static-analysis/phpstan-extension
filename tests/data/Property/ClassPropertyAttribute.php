@@ -1,6 +1,6 @@
 <?php
 
-namespace test\PhpStaticAnalysis\PHPStanExtension\data;
+namespace test\PhpStaticAnalysis\PHPStanExtension\data\Property;
 
 use PhpStaticAnalysis\Attributes\Property;
 
@@ -19,9 +19,14 @@ class ClassPropertyAttribute
     {
         return $name;
     }
+
+    public function __set(string $name, mixed $value)
+    {
+        $this->$name = $value;
+    }
 }
 
 $class = new ClassPropertyAttribute();
 $foo = $class->name;
-$bar = $class->age;
+$class->age = 7;
 $indexes = $class->index1 + $class->index2;

@@ -1,6 +1,6 @@
 <?php
 
-namespace test\PhpStaticAnalysis\PHPStanExtension\data;
+namespace test\PhpStaticAnalysis\PHPStanExtension\data\Property;
 
 use PhpStaticAnalysis\Attributes\Property;
 
@@ -10,7 +10,7 @@ use PhpStaticAnalysis\Attributes\Property;
 class InvalidClassPropertyAttribute
 {
     #[Property('string')]
-    public function getNane(): string
+    public function getName(): string
     {
         return "John";
     }
