@@ -4,7 +4,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\PropertyRead;
 
 use PhpStaticAnalysis\Attributes\PropertyRead;
 
-#[PropertyRead(name: 'string')]
+#[PropertyRead(name: 'string')] // cannot be written to
 #[PropertyRead('int $age')]
 #[PropertyRead(
     index1: 'string[]',

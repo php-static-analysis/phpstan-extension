@@ -5,7 +5,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\Method;
 use PhpStaticAnalysis\Attributes\Method;
 use PhpStaticAnalysis\Attributes\Param;
 
-#[Method('string getString()')]
+#[Method('string getString()')] // get the main string
 #[Method(
     'void setString(string $text)',
     'static string staticGetter()',

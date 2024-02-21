@@ -6,7 +6,7 @@ use PhpStaticAnalysis\Attributes\Returns;
 
 class MethodReturnsAttribute
 {
-    #[Returns('string[]')]
+    #[Returns('string[]')] // the names of the users
     public function getNames(): array
     {
         return ['hello', 'world'];

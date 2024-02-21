@@ -13,7 +13,7 @@ class ClassTemplateCovariantAttributeChild extends ClassTemplateCovariantAttribu
 {
 }
 
-#[TemplateCovariant('TCreable')]
+#[TemplateCovariant('TCreable')] // can only be used in covariant position
 class Creator
 {
     public function __construct(

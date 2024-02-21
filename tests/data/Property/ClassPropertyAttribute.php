@@ -4,7 +4,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\Property;
 
 use PhpStaticAnalysis\Attributes\Property;
 
-#[Property(name: 'string')]
+#[Property(name: 'string')] // the name of the user
 #[Property('int $age')]
 #[Property(
     index1: 'string[]',

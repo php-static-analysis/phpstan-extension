@@ -4,7 +4,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\PropertyWrite;
 
 use PhpStaticAnalysis\Attributes\PropertyWrite;
 
-#[PropertyWrite(name: 'string')]
+#[PropertyWrite(name: 'string')] // cannot be read
 #[PropertyWrite('int $age')]
 #[PropertyWrite(
     index1: 'string[]',

@@ -9,7 +9,7 @@ class PropertyTypeAttribute
     #[Type('string')]
     public const ATTRIBUTE_NAME = 'Type';
 
-    #[Type('int[]')]
+    #[Type('int[]')] // number of items
     public array $nums;
 
     /**

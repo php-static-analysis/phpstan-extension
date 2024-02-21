@@ -6,7 +6,7 @@ use PhpStaticAnalysis\Attributes\IsReadOnly;
 
 class PropertyIsReadOnlyAttribute
 {
-    #[IsReadOnly]
+    #[IsReadOnly] // cannot be written to
     public string $name;
 
     public function __construct()

@@ -13,7 +13,7 @@ class ClassTemplateContravariantAttributeChild extends ClassTemplateContravarian
 {
 }
 
-#[TemplateContravariant('TConsumable')]
+#[TemplateContravariant('TConsumable')] // can only be used in contra-variant position
 class Consumer
 {
     #[Param(consumable: 'TConsumable')]

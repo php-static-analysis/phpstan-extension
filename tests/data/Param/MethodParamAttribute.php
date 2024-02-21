@@ -6,7 +6,7 @@ use PhpStaticAnalysis\Attributes\Param;
 
 class MethodParamAttribute
 {
-    #[Param(names: 'string[]')]
+    #[Param(names: 'string[]')] // returns the number of names
     public function countNames(array $names): int
     {
         return count($names);
