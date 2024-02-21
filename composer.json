@@ -24,12 +24,13 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.0",
-        "php-static-analysis/attributes": "^0.1.7 || dev-main",
-        "php-static-analysis/node-visitor": "^0.1.7 || dev-main",
+        "php-static-analysis/attributes": "^0.1.8 || dev-main",
+        "php-static-analysis/node-visitor": "^0.1.8 || dev-main",
         "phpstan/phpstan": "^1.8"
     },
     "require-dev": {
         "php-static-analysis/psalm-plugin": "dev-main",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
         "phpunit/phpunit": "^9.0",
         "symplify/easy-coding-standard": "^12.1",
         "vimeo/psalm": "^5"
