@@ -35,7 +35,7 @@ class AttributeParser implements Parser
     private function traverseAst(array $ast): array
     {
         $traverser = new NodeTraverser();
-        $nodeVisitor = new AttributeNodeVisitor();
+        $nodeVisitor = new AttributeNodeVisitor('phpstan');
         $traverser->addVisitor($nodeVisitor);
 
         $ast = $traverser->traverse($ast);

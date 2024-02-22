@@ -24,8 +24,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.0",
-        "php-static-analysis/attributes": "^0.1.8 || dev-main",
-        "php-static-analysis/node-visitor": "^0.1.8 || dev-main",
+        "php-static-analysis/attributes": "^0.1.9 || dev-main",
+        "php-static-analysis/node-visitor": "^0.1.9 || dev-main",
         "phpstan/phpstan": "^1.8"
     },
     "require-dev": {
