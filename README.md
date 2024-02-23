@@ -94,22 +94,25 @@ This extension works by interacting with the parser that PHPStan uses to parse t
 
 These are the available attributes and their corresponding PHPDoc annotations:
 
-| Attribute                                                                                                         | PHPDoc Annotations        |
-|-------------------------------------------------------------------------------------------------------------------|---------------------------|
-| [Deprecated](https://github.com/php-static-analysis/attributes/blob/main/doc/Deprecated.md)                       | `@deprecated`             |
-| [Internal](https://github.com/php-static-analysis/attributes/blob/main/doc/Internal.md)                           | `@internal`               |
-| [IsReadOnly](https://github.com/php-static-analysis/attributes/blob/main/doc/IsReadOnly.md)                       | `@readonly`               |
-| [Method](https://github.com/php-static-analysis/attributes/blob/main/doc/Method.md)                               | `@method`                 |
-| [Mixin](https://github.com/php-static-analysis/attributes/blob/main/doc/Mixin.md)                                 | `@mixin`                  |
-| [Param](https://github.com/php-static-analysis/attributes/blob/main/doc/Param.md)                                 | `@param`                  |
-| [Property](https://github.com/php-static-analysis/attributes/blob/main/doc/Property.md)                           | `@property` `@var`        |
-| [PropertyRead](https://github.com/php-static-analysis/attributes/blob/main/doc/PropertyRead.md)                   | `@property-read`          |
-| [PropertyWrite](https://github.com/php-static-analysis/attributes/blob/main/doc/PropertyWrite.md)                 | `@property-write`         |
-| [Returns](https://github.com/php-static-analysis/attributes/blob/main/doc/Returns.md)                             | `@return`                 |
-| [Template](https://github.com/php-static-analysis/attributes/blob/main/doc/Template.md)                           | `@template`               |
-| [TemplateContravariant](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateContravariant.md) | `@template-contravariant` |
-| [TemplateCovariant](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateCovariant.md)         | `@template-covariant`     |
-| [Type](https://github.com/php-static-analysis/attributes/blob/main/doc/Type.md)                                   | `@var` `@return`          |
+| Attribute                                                                                                         | PHPDoc Annotations             |
+|-------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| [Deprecated](https://github.com/php-static-analysis/attributes/blob/main/doc/Deprecated.md)                       | `@deprecated`                  |
+| [Internal](https://github.com/php-static-analysis/attributes/blob/main/doc/Internal.md)                           | `@internal`                    |
+| [IsReadOnly](https://github.com/php-static-analysis/attributes/blob/main/doc/IsReadOnly.md)                       | `@readonly`                    |
+| [Method](https://github.com/php-static-analysis/attributes/blob/main/doc/Method.md)                               | `@method`                      |
+| [Mixin](https://github.com/php-static-analysis/attributes/blob/main/doc/Mixin.md)                                 | `@mixin`                       |
+| [Param](https://github.com/php-static-analysis/attributes/blob/main/doc/Param.md)                                 | `@param`                       |
+| [Property](https://github.com/php-static-analysis/attributes/blob/main/doc/Property.md)                           | `@property` `@var`             |
+| [PropertyRead](https://github.com/php-static-analysis/attributes/blob/main/doc/PropertyRead.md)                   | `@property-read`               |
+| [PropertyWrite](https://github.com/php-static-analysis/attributes/blob/main/doc/PropertyWrite.md)                 | `@property-write`              |
+| [Returns](https://github.com/php-static-analysis/attributes/blob/main/doc/Returns.md)                             | `@return`                      |
+| [Template](https://github.com/php-static-analysis/attributes/blob/main/doc/Template.md)                           | `@template`                    |
+| [TemplateContravariant](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateContravariant.md) | `@template-contravariant`      |
+| [TemplateCovariant](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateCovariant.md)         | `@template-covariant`          |
+| [TemplateExtends](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateExtends.md)             | `@extends` `@template-extends` |
+| [TemplateImplements](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateImplements.md)             | `@implements` `@template-implements` |
+| [TemplateUse](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateUse.md)             | `@use` `@template-use` |
+| [Type](https://github.com/php-static-analysis/attributes/blob/main/doc/Type.md)                                   | `@var` `@return`               |
 
 
 

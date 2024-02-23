@@ -30,7 +30,7 @@ class PropertyReadAttributeTest extends BaseAttributeTestCase
             'PHPDoc tag @property-read has invalid value (): Unexpected token "\n * ", expected type at offset 21' => 7,
             'PHPDoc tag @property-read has invalid value (count($a) $name): Unexpected token "(", expected variable at offset 70' => 7,
             'PHPDoc tag @property-read has invalid value (string): Unexpected token "\n * ", expected variable at offset 46' => 7,
-            'Parameter #1 ...$params of attribute class PhpStaticAnalysis\Attributes\PropertyRead constructor expects string, int given.' => 7,
+            'Parameter #1 ...$properties of attribute class PhpStaticAnalysis\Attributes\PropertyRead constructor expects string, int given.' => 7,
             'Attribute class PhpStaticAnalysis\Attributes\PropertyRead does not have the method target.' => 13,
             'Property test\PhpStaticAnalysis\PHPStanExtension\data\PropertyRead\ClassPropertyReadAttribute::$age is not writable.' => 21,
         ];

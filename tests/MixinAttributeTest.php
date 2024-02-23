@@ -29,7 +29,7 @@ class MixinAttributeTest extends BaseAttributeTestCase
         $expectedErrors = [
             'PHPDoc tag @mixin contains unknown class test\PhpStaticAnalysis\PHPStanExtension\data\Mixin\count.' => 7,
             'PHPDoc tag @mixin has invalid value (): Unexpected token "\n * ", expected type at offset 13' => 7,
-            'Parameter #1 ...$params of attribute class PhpStaticAnalysis\Attributes\Mixin constructor expects string, int given.' => 7,
+            'Parameter #1 ...$classes of attribute class PhpStaticAnalysis\Attributes\Mixin constructor expects string, int given.' => 7,
             'Attribute class PhpStaticAnalysis\Attributes\Mixin does not have the method target.' => 11,
         ];
 

@@ -16,7 +16,7 @@ class ParamAttributeTest extends BaseAttributeTestCase
         $this->assertCount(0, $errors);
     }
 
-    public function testInvalidMethodReturnsAttribute(): void
+    public function testInvalidMethodParamAttribute(): void
     {
         $errors = $this->analyse(__DIR__ . '/data/Param/InvalidMethodParamAttribute.php');
 
