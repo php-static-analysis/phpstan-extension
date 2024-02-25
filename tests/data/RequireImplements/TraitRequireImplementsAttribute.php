@@ -4,10 +4,10 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\RequireImplements;
 
 use PhpStaticAnalysis\Attributes\RequireImplements;
 
-#[RequireImplements('InterfaceRequireImplementsAttribute')] // the class that uses this trait needs to implement these interfaces
+#[RequireImplements(InterfaceRequireImplementsAttribute::class)] // the class that uses this trait needs to implement these interfaces
 #[RequireImplements(
-    'InterfaceRequireImplementsAttribute2',
-    'InterfaceRequireImplementsAttribute3'
+    InterfaceRequireImplementsAttribute2::class,
+    InterfaceRequireImplementsAttribute3::class
 )]
 trait TraitRequireImplementsAttribute
 {

@@ -2,6 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\ParamOut;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\ParamOut;
 
 class MethodParamOutAttribute
@@ -10,6 +11,12 @@ class MethodParamOutAttribute
     public function setNames(mixed &$names): void
     {
         $names = 1;
+    }
+
+    #[ParamOut(exception: Exception::class)]
+    public function setException(mixed &$exception): void
+    {
+        $exception = new Exception();
     }
 
     #[ParamOut('int $names')]

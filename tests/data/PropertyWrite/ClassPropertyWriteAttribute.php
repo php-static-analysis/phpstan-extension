@@ -2,9 +2,11 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\PropertyWrite;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\PropertyWrite;
 
 #[PropertyWrite(name: 'string')] // cannot be read
+#[PropertyWrite(exception: Exception::class)]
 #[PropertyWrite('int $age')]
 #[PropertyWrite(
     index1: 'string[]',

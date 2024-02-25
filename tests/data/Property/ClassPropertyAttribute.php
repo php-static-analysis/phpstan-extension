@@ -2,9 +2,11 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\Property;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\Property;
 
 #[Property(name: 'string')] // the name of the user
+#[Property(exception: Exception::class)]
 #[Property('int $age')]
 #[Property(
     index1: 'string[]',

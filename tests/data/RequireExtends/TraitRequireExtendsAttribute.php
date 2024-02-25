@@ -4,7 +4,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension\data\RequireExtends;
 
 use PhpStaticAnalysis\Attributes\RequireExtends;
 
-#[RequireExtends('ClassRequireExtendsAttribute')] // the class using this trait needs to extend this class
+#[RequireExtends(ClassRequireExtendsAttribute::class)] // the class using this trait needs to extend this class
 trait TraitRequireExtendsAttribute
 {
 }

@@ -2,6 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\Returns;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\Returns;
 
 class MethodReturnsAttribute
@@ -10,6 +11,12 @@ class MethodReturnsAttribute
     public function getNames(): array
     {
         return ['hello', 'world'];
+    }
+
+    #[Returns(Exception::class)]
+    public function getException()
+    {
+        return new Exception();
     }
 
     /**

@@ -2,9 +2,11 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\PropertyRead;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\PropertyRead;
 
 #[PropertyRead(name: 'string')] // cannot be written to
+#[PropertyRead(exception: Exception::class)]
 #[PropertyRead('int $age')]
 #[PropertyRead(
     index1: 'string[]',

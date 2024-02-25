@@ -19,10 +19,10 @@ class Another
 {
 }
 
-#[Mixin('ClassMixinAttribute')] // this is the proxied class
+#[Mixin(ClassMixinAttribute::class)] // this is the proxied class
 #[Mixin(
-    'MyClass',
-    'Another',
+    MyClass::class,
+    Another::class,
 )]
 class ClassMixinAttributeProxy
 {

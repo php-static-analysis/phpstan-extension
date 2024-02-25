@@ -2,6 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\Type;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\Type;
 
 class PropertyTypeAttribute
@@ -11,6 +12,9 @@ class PropertyTypeAttribute
 
     #[Type('int[]')] // number of items
     public array $nums;
+
+    #[Type(Exception::class)]
+    public $exception;
 
     /**
      * @var string

@@ -2,6 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension\data\Param;
 
+use Exception;
 use PhpStaticAnalysis\Attributes\Param;
 
 class MethodParamAttribute
@@ -10,6 +11,12 @@ class MethodParamAttribute
     public function countNames(array $names): int
     {
         return count($names);
+    }
+
+    #[Param(exception: Exception::class)]
+    public function throwException($exception): void
+    {
+        throw $exception;
     }
 
     #[Param('string[] $names')]
