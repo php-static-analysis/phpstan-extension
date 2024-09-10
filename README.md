@@ -1,7 +1,6 @@
 # PHP Static Analysis Attributes PHPStan Extension
 [![Continuous Integration](https://github.com/php-static-analysis/phpstan-extension/workflows/All%20Tests/badge.svg)](https://github.com/php-static-analysis/phpstan-extension/actions)
 [![Latest Stable Version](https://poser.pugx.org/php-static-analysis/phpstan-extension/v/stable)](https://packagist.org/packages/php-static-analysis/phpstan-extension)
-[![PHP Version Require](http://poser.pugx.org/php-static-analysis/phpstan-extension/require/php)](https://packagist.org/packages/php-static-analysis/phpstan-extension)
 [![License](https://poser.pugx.org/php-static-analysis/phpstan-extension/license)](https://github.com/php-static-analysis/phpstan-extension/blob/main/LICENSE)
 [![Total Downloads](https://poser.pugx.org/php-static-analysis/phpstan-extension/downloads)](https://packagist.org/packages/php-static-analysis/phpstan-extension/stats)
 
@@ -123,6 +122,10 @@ These are the available attributes and their corresponding PHPDoc annotations:
 | [TemplateUse](https://github.com/php-static-analysis/attributes/blob/main/doc/TemplateUse.md)                     | `@use` `@template-use`               |
 | [Throws](https://github.com/php-static-analysis/attributes/blob/main/doc/Throws.md)                               | `@throws`                            |
 | [Type](https://github.com/php-static-analysis/attributes/blob/main/doc/Type.md)                                   | `@var` `@return`                     |
+
+## Sponsor this project
+
+If you would like to support the development of this project, please consider [sponsoring me](https://github.com/sponsors/carlos-granados)
 
 
 
