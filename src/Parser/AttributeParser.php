@@ -10,6 +10,7 @@ use PHPStan\Parser\Parser;
 use PhpStaticAnalysis\Attributes\Param;
 use PhpStaticAnalysis\Attributes\Returns;
 use PhpStaticAnalysis\NodeVisitor\AttributeNodeVisitor;
+use Webmozart\Assert\Assert;
 
 class AttributeParser implements Parser
 {
@@ -39,7 +40,7 @@ class AttributeParser implements Parser
         $traverser->addVisitor($nodeVisitor);
 
         $ast = $traverser->traverse($ast);
-        /** @var Stmt[] $ast */
+        Assert::allIsInstanceOf($ast, Stmt::class);
         return $ast;
     }
 }

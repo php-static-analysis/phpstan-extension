@@ -95,6 +95,7 @@ These are the available attributes and their corresponding PHPDoc annotations:
 
 | Attribute                                                                                                         | PHPDoc Annotations                   |
 |-------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| [Assert](https://github.com/php-static-analysis/attributes/blob/main/doc/Assert.md)                               | `@assert`                            |
 | [DefineType](https://github.com/php-static-analysis/attributes/blob/main/doc/DefineType.md)                       | `@type`                              |
 | [Deprecated](https://github.com/php-static-analysis/attributes/blob/main/doc/Deprecated.md)                       | `@deprecated`                        |
 | [Immmutable](https://github.com/php-static-analysis/attributes/blob/main/doc/Immmutable.md)                       | `@immmutable`                        |
