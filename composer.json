@@ -26,7 +26,7 @@
         "php": ">=8.0",
         "php-static-analysis/attributes": "^0.3.1 || dev-main",
         "php-static-analysis/node-visitor": "^0.3.1 || dev-main",
-        "phpstan/phpstan": "^1.8",
+        "phpstan/phpstan": "^1.8 | ^2.0",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
