@@ -39,11 +39,9 @@ class TemplateAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/Template/InvalidMethodTemplateAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @template has invalid value (): Unexpected token "\n ", expected type at offset 16' => 11,
-            'Parameter #1 $name of attribute class PhpStaticAnalysis\Attributes\Template constructor expects string, int given.' => 11,
-            'PHPDoc tag @template has invalid value (+5): Unexpected token "+5", expected type at offset 17' => 17,
+            'PHPDoc tag @template has invalid value (): Unexpected token "\n ", expected type at offset 16 on line 2' => 12,
+            'PHPDoc tag @template has invalid value (+5): Unexpected token "+5", expected type at offset 17 on line 2' => 18,
             'Attribute class PhpStaticAnalysis\Attributes\Template does not have the property target.' => 23,
-            'Parameter #2 $of of attribute class PhpStaticAnalysis\Attributes\Template constructor expects string|null, int given.' => 26
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);

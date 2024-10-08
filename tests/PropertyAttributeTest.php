@@ -27,10 +27,9 @@ class PropertyAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/Property/InvalidClassPropertyAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @property has invalid value (): Unexpected token "\n * ", expected type at offset 16' => 7,
-            'PHPDoc tag @property has invalid value (count($a) $name): Unexpected token "(", expected variable at offset 55' => 7,
-            'PHPDoc tag @property has invalid value (string): Unexpected token "\n * ", expected variable at offset 36' => 7,
-            'Parameter #1 ...$properties of attribute class PhpStaticAnalysis\Attributes\Property constructor expects string, int given.' => 7,
+            'PHPDoc tag @property has invalid value (): Unexpected token "\n * ", expected type at offset 16 on line 2' => 8,
+            'PHPDoc tag @property has invalid value (string): Unexpected token "\n * ", expected variable at offset 36 on line 3' => 9,
+            'PHPDoc tag @property has invalid value (count($a) $name): Unexpected token "(", expected variable at offset 55 on line 4' => 10,
             'Attribute class PhpStaticAnalysis\Attributes\Property does not have the method target.' => 12,
         ];
 

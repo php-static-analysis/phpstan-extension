@@ -21,7 +21,7 @@ class AssertAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/Assert/InvalidMethodAssertAttribute.php');
 
         $expectedErrors = [
-            'Parameter #1 ...$params of attribute class PhpStaticAnalysis\Attributes\Assert constructor expects string, int given.' => 9,
+            'PHPDoc tag @phpstan-assert has invalid value (): Unexpected token "\n ", expected type at offset 22 on line 2' => 10,
             'Attribute class PhpStaticAnalysis\Attributes\Assert does not have the property target.' => 14,
         ];
 

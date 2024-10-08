@@ -25,8 +25,7 @@ class ThrowsAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/Throws/InvalidMethodThrowsAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @throws has invalid value (): Unexpected token "\n ", expected type at offset 14' => 10,
-            'Parameter #1 ...$exceptions of attribute class PhpStaticAnalysis\Attributes\Throws constructor expects string, int given.' => 10,
+            'PHPDoc tag @throws has invalid value (): Unexpected token "\n ", expected type at offset 14 on line 2' => 11,
             'Method test\PhpStaticAnalysis\PHPStanExtension\data\Throws\InvalidMethodThrowsAttribute::getOtherNameLength() has string in PHPDoc @throws tag but it\'s not thrown.' => 16,
             'PHPDoc tag @throws with type string is not subtype of Throwable' => 16,
             'Attribute class PhpStaticAnalysis\Attributes\Throws does not have the property target.' => 22,

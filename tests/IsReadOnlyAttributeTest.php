@@ -19,21 +19,9 @@ class IsReadOnlyAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/IsReadOnly/InvalidPropertyIsReadOnlyAttribute.php');
 
         $expectedErrors = [
-            'Attribute class PhpStaticAnalysis\Attributes\IsReadOnly constructor invoked with 1 parameter, 0 required.' => 9,
-            'Attribute class PhpStaticAnalysis\Attributes\IsReadOnly is not repeatable but is already present above the property.' => 13,
             'Attribute class PhpStaticAnalysis\Attributes\IsReadOnly does not have the method target.' => 16,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);
-    }
-
-    public static function getAdditionalConfigFiles(): array
-    {
-        return array_merge(
-            parent::getAdditionalConfigFiles(),
-            [
-                __DIR__ . '/conf/readonly.neon',
-            ]
-        );
     }
 }

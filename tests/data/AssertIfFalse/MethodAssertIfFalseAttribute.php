@@ -7,6 +7,8 @@ use PhpStaticAnalysis\Attributes\AssertIfFalse;
 
 class MethodAssertIfFalseAttribute
 {
+    private mixed $name = 'name';
+
     #[AssertIfFalse(name: 'string')] // checks name is string
     public function checkString(mixed $name): bool
     {
@@ -28,7 +30,7 @@ class MethodAssertIfFalseAttribute
     #[AssertIfFalse('string $this->name')]
     public function checkOtherPropertyString(mixed $name): bool
     {
-        return !is_string($name);
+        return !is_string($this->name);
     }
 
     /**

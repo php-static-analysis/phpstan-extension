@@ -22,7 +22,7 @@ class AssertIfFalseAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/AssertIfFalse/InvalidMethodAssertIfFalseAttribute.php');
 
         $expectedErrors = [
-            'Parameter #1 ...$params of attribute class PhpStaticAnalysis\Attributes\AssertIfFalse constructor expects string, int given.' => 9,
+            'PHPDoc tag @phpstan-assert-if-false has invalid value (): Unexpected token "\n ", expected type at offset 31 on line 2' => 10,
             'Attribute class PhpStaticAnalysis\Attributes\AssertIfFalse does not have the property target.' => 15,
         ];
 

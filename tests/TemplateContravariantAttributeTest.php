@@ -27,10 +27,8 @@ class TemplateContravariantAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/TemplateContravariant/InvalidClassTemplateContravariantAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @template-contravariant has invalid value (): Unexpected token "\n * ", expected type at offset 30' => 7,
-            'PHPDoc tag @template-contravariant has invalid value (+5): Unexpected token "+5", expected type at offset 58' => 7,
-            'Parameter #1 $name of attribute class PhpStaticAnalysis\Attributes\TemplateContravariant constructor expects string, int given.' => 7,
-            'Parameter #2 $of of attribute class PhpStaticAnalysis\Attributes\TemplateContravariant constructor expects string|null, int given.' => 9,
+            'PHPDoc tag @template-contravariant has invalid value (): Unexpected token "\n * ", expected type at offset 30 on line 2' => 8,
+            'PHPDoc tag @template-contravariant has invalid value (+5): Unexpected token "+5", expected type at offset 58 on line 3' => 9,
             'Attribute class PhpStaticAnalysis\Attributes\TemplateContravariant does not have the property target.' => 12,
         ];
 

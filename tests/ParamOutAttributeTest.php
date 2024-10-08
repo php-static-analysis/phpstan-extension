@@ -21,10 +21,9 @@ class ParamOutAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/ParamOut/InvalidMethodParamOutAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @param-out has invalid value (): Unexpected token "\n ", expected type at offset 17' => 9,
-            'Parameter #1 ...$params of attribute class PhpStaticAnalysis\Attributes\ParamOut constructor expects string, int given.' => 9,
-            'PHPDoc tag @param-out has invalid value (string): Unexpected token "\n ", expected variable at offset 24' => 15,
-            'PHPDoc tag @param-out has invalid value (count($a) $name): Unexpected token "(", expected variable at offset 23' => 21,
+            'PHPDoc tag @param-out has invalid value (): Unexpected token "\n ", expected type at offset 17 on line 2' => 10,
+            'PHPDoc tag @param-out has invalid value (string): Unexpected token "\n ", expected variable at offset 24 on line 2' => 16,
+            'PHPDoc tag @param-out has invalid value (count($a) $name): Unexpected token "(", expected variable at offset 23 on line 2' => 22,
             'Attribute class PhpStaticAnalysis\Attributes\ParamOut does not have the property target.' => 27,
         ];
 

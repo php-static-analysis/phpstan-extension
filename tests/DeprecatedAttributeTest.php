@@ -54,7 +54,6 @@ class DeprecatedAttributeTest extends BaseAttributeTestCase
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\Deprecated does not have the parameter target.' => 12,
-            'Attribute class PhpStaticAnalysis\Attributes\Deprecated is not repeatable but is already present above the method.' => 19,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);

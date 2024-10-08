@@ -22,7 +22,7 @@ class PureAttributeTest extends BaseAttributeTestCase
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\Pure does not have the property target.' => 11,
-            'Attribute class PhpStaticAnalysis\Attributes\Pure is not repeatable but is already present above the method.' => 15,
+            'Method test\PhpStaticAnalysis\PHPStanExtension\data\Pure\InvalidMethodPureAttribute::getMoreName() is marked as pure but returns void.' => 14,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);

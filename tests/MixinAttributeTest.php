@@ -27,9 +27,8 @@ class MixinAttributeTest extends BaseAttributeTestCase
         $errors = $this->analyse(__DIR__ . '/data/Mixin/InvalidClassMixinAttribute.php');
 
         $expectedErrors = [
-            'PHPDoc tag @mixin contains unknown class test\PhpStaticAnalysis\PHPStanExtension\data\Mixin\count.' => 7,
-            'PHPDoc tag @mixin has invalid value (): Unexpected token "\n * ", expected type at offset 13' => 7,
-            'Parameter #1 ...$classes of attribute class PhpStaticAnalysis\Attributes\Mixin constructor expects string, int given.' => 7,
+            'PHPDoc tag @mixin has invalid value (): Unexpected token "\n * ", expected type at offset 13 on line 2' => 8,
+            'PHPDoc tag @mixin has invalid value (count($a)): Unexpected token "(", expected TOKEN_HORIZONTAL_WS at offset 29 on line 3' => 9,
             'Attribute class PhpStaticAnalysis\Attributes\Mixin does not have the method target.' => 11,
         ];
 

@@ -44,9 +44,7 @@ class InternalAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/Internal/InvalidMethodInternalAttribute.php');
         $expectedErrors = [
-            'Parameter #1 $namespace of attribute class PhpStaticAnalysis\Attributes\Internal constructor expects string|null, int given.' => 9,
             'Attribute class PhpStaticAnalysis\Attributes\Internal does not have the parameter target.' => 15,
-            'Attribute class PhpStaticAnalysis\Attributes\Internal is not repeatable but is already present above the method.' => 22,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);

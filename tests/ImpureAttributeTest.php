@@ -22,7 +22,7 @@ class ImpureAttributeTest extends BaseAttributeTestCase
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\Impure does not have the property target.' => 11,
-            'Attribute class PhpStaticAnalysis\Attributes\Impure is not repeatable but is already present above the method.' => 15,
+            'Method test\PhpStaticAnalysis\PHPStanExtension\data\Impure\InvalidMethodImpureAttribute::getMoreName() is marked as impure but does not have any side effects.' => 14,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);
