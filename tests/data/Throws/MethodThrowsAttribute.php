@@ -70,9 +70,8 @@ class MethodThrowsAttribute
     }
 
     #[Throws(Exception::class)]
-    public function countNoErrorName(string $name): int
+    public function countNoErrorName(): void
     {
-        return strlen($name);
     }
 
     /**

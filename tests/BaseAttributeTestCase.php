@@ -5,6 +5,7 @@ namespace test\PhpStaticAnalysis\PHPStanExtension;
 use PHPStan\Analyser\Analyser;
 use PHPStan\Analyser\Error;
 use PHPStan\File\FileHelper;
+use PHPStan\Internal\ComposerHelper;
 use PHPStan\Testing\PHPStanTestCase;
 use PhpStaticAnalysis\Attributes\Param;
 use PhpStaticAnalysis\Attributes\Returns;
@@ -48,5 +49,10 @@ class BaseAttributeTestCase extends PHPStanTestCase
         return [
             __DIR__ . '/../extension.neon',
         ];
+    }
+
+    public static function getPhpStanVersion(): string
+    {
+        return ComposerHelper::getPhpStanVersion();
     }
 }

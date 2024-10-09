@@ -26,11 +26,19 @@ class ImportTypeAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/ImportType/InvalidClassImportTypeAttribute.php');
 
-        $expectedErrors = [
-            'PHPDoc tag @phpstan-import-type has invalid value (Unexpected token "(", expected \'*/\' at offset 98 on line 4): Unexpected token "(", expected \'*/\' at offset 98' => 8,
-            'Parameter #1 ...$from of attribute class PhpStaticAnalysis\Attributes\ImportType constructor expects string, int given.' => 8,
-            'Attribute class PhpStaticAnalysis\Attributes\ImportType does not have the method target.' => 13,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'PHPDoc tag @phpstan-import-type has invalid value (Unexpected token "(", expected \'*/\' at offset 98 on line 4): Unexpected token "(", expected \'*/\' at offset 98' => 8,
+                'Parameter #1 ...$from of attribute class PhpStaticAnalysis\Attributes\ImportType constructor expects string, int given.' => 8,
+                'Attribute class PhpStaticAnalysis\Attributes\ImportType does not have the method target.' => 13,
+            ];
+        } else {
+            $expectedErrors = [
+                'Parameter #1 ...$from of attribute class PhpStaticAnalysis\Attributes\ImportType constructor expects string, int given.' => 8,
+                'PHPDoc tag @phpstan-import-type has invalid value (Unexpected token "(", expected \'*/\' at offset 98 on line 4): Unexpected token "(", expected \'*/\' at offset 98 on line 4' => 11,
+                'Attribute class PhpStaticAnalysis\Attributes\ImportType does not have the method target.' => 13,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }

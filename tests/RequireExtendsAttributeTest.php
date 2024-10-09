@@ -18,14 +18,25 @@ class RequireExtendsAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/RequireExtends/InvalidTraitRequireExtendsAttribute.php');
 
-        $expectedErrors = [
-            'PHPDoc tag @phpstan-require-extends has invalid value (): Unexpected token "\n ", expected type at offset 31' => 7,
-            'Parameter #1 $class of attribute class PhpStaticAnalysis\Attributes\RequireExtends constructor expects string, int given.' => 7,
-            'PHPDoc tag @phpstan-require-extends contains non-object type int.' => 12,
-            'PHPDoc tag @phpstan-require-extends can only be used once.' => 17,
-            'Attribute class PhpStaticAnalysis\Attributes\RequireExtends is not repeatable but is already present above the class.' => 18,
-            'Attribute class PhpStaticAnalysis\Attributes\RequireExtends does not have the property target.' => 21,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'PHPDoc tag @phpstan-require-extends has invalid value (): Unexpected token "\n ", expected type at offset 31' => 7,
+                'Parameter #1 $class of attribute class PhpStaticAnalysis\Attributes\RequireExtends constructor expects string, int given.' => 7,
+                'PHPDoc tag @phpstan-require-extends contains non-object type int.' => 12,
+                'PHPDoc tag @phpstan-require-extends can only be used once.' => 17,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireExtends is not repeatable but is already present above the class.' => 18,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireExtends does not have the property target.' => 21,
+            ];
+        } else {
+            $expectedErrors = [
+                'Parameter #1 $class of attribute class PhpStaticAnalysis\Attributes\RequireExtends constructor expects string, int given.' => 7,
+                'PHPDoc tag @phpstan-require-extends has invalid value (): Unexpected token "\n ", expected type at offset 31 on line 2' => 8,
+                'PHPDoc tag @phpstan-require-extends contains non-object type int.' => 12,
+                'PHPDoc tag @phpstan-require-extends can only be used once.' => 17,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireExtends is not repeatable but is already present above the class.' => 18,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireExtends does not have the property target.' => 21,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }

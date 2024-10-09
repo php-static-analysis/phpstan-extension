@@ -29,11 +29,15 @@ class IsReadOnlyAttributeTest extends BaseAttributeTestCase
 
     public static function getAdditionalConfigFiles(): array
     {
-        return array_merge(
-            parent::getAdditionalConfigFiles(),
-            [
-                __DIR__ . '/conf/readonly.neon',
-            ]
-        );
+        if (self::getPhpStanVersion() < '2') {
+            return array_merge(
+                parent::getAdditionalConfigFiles(),
+                [
+                    __DIR__ . '/conf/readonly.neon',
+                ]
+            );
+        } else {
+            return parent::getAdditionalConfigFiles();
+        }
     }
 }

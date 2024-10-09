@@ -8,8 +8,14 @@ class ImmutableAttributeTest extends BaseAttributeTestCase
     public function testClassImmutableAttribute(): void
     {
         $errors = $this->analyse(__DIR__ . '/data/Immutable/ClassImmutableAttribute.php');
-        $expectedErrors = [
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [];
+        } else {
+            $expectedErrors = [
+                '@readonly property cannot have a default value.' => 10,
+                '@readonly property test\PhpStaticAnalysis\PHPStanExtension\data\Immutable\ClassImmutableAttribute::$name is assigned outside of its declaring class.' => 14,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }
@@ -30,10 +36,18 @@ class ImmutableAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/Immutable/InvalidClassImmutableAttribute.php');
 
-        $expectedErrors = [
-            'Attribute class PhpStaticAnalysis\Attributes\Immutable is not repeatable but is already present above the class.' => 10,
-            'Attribute class PhpStaticAnalysis\Attributes\Immutable does not have the property target.' => 13,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'Attribute class PhpStaticAnalysis\Attributes\Immutable is not repeatable but is already present above the class.' => 10,
+                'Attribute class PhpStaticAnalysis\Attributes\Immutable does not have the property target.' => 13,
+            ];
+        } else {
+            $expectedErrors = [
+                'Attribute class PhpStaticAnalysis\Attributes\Immutable is not repeatable but is already present above the class.' => 10,
+                'Attribute class PhpStaticAnalysis\Attributes\Immutable does not have the property target.' => 13,
+                '@readonly property cannot have a default value.' => 14,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }

@@ -20,10 +20,18 @@ class PureAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/Pure/InvalidMethodPureAttribute.php');
 
-        $expectedErrors = [
-            'Attribute class PhpStaticAnalysis\Attributes\Pure does not have the property target.' => 11,
-            'Attribute class PhpStaticAnalysis\Attributes\Pure is not repeatable but is already present above the method.' => 15,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'Attribute class PhpStaticAnalysis\Attributes\Pure does not have the property target.' => 11,
+                'Attribute class PhpStaticAnalysis\Attributes\Pure is not repeatable but is already present above the method.' => 15,
+            ];
+        } else {
+            $expectedErrors = [
+                'Attribute class PhpStaticAnalysis\Attributes\Pure does not have the property target.' => 11,
+                'Method test\PhpStaticAnalysis\PHPStanExtension\data\Pure\InvalidMethodPureAttribute::getMoreName() is marked as pure but returns void.' => 14,
+                'Attribute class PhpStaticAnalysis\Attributes\Pure is not repeatable but is already present above the method.' => 15,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }

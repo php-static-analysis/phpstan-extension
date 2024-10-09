@@ -26,13 +26,23 @@ class MethodAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/Method/InvalidClassMethodAttribute.php');
 
-        $expectedErrors = [
-            'PHPDoc tag @method has invalid value (): Unexpected token "\n * ", expected type at offset 14' => 8,
-            'PHPDoc tag @method has invalid value (string): Unexpected token "\n * ", expected \'(\' at offset 32' => 8,
-            'Parameter #1 ...$methods of attribute class PhpStaticAnalysis\Attributes\Method constructor expects string, int given.' => 8,
-            'Attribute class PhpStaticAnalysis\Attributes\Method does not have the method target.' => 13,
-            'Call to an undefined method test\PhpStaticAnalysis\PHPStanExtension\data\Method\InvalidClassMethodAttribute::badFunction().' => 31,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'PHPDoc tag @method has invalid value (): Unexpected token "\n * ", expected type at offset 14' => 8,
+                'PHPDoc tag @method has invalid value (string): Unexpected token "\n * ", expected \'(\' at offset 32' => 8,
+                'Parameter #1 ...$methods of attribute class PhpStaticAnalysis\Attributes\Method constructor expects string, int given.' => 8,
+                'Attribute class PhpStaticAnalysis\Attributes\Method does not have the method target.' => 13,
+                'Call to an undefined method test\PhpStaticAnalysis\PHPStanExtension\data\Method\InvalidClassMethodAttribute::badFunction().' => 31,
+            ];
+        } else {
+            $expectedErrors = [
+                'Parameter #1 ...$methods of attribute class PhpStaticAnalysis\Attributes\Method constructor expects string, int given.' => 8,
+                'PHPDoc tag @method has invalid value (): Unexpected token "\n * ", expected type at offset 14 on line 2' => 9,
+                'PHPDoc tag @method has invalid value (string): Unexpected token "\n * ", expected \'(\' at offset 32 on line 3' => 10,
+                'Attribute class PhpStaticAnalysis\Attributes\Method does not have the method target.' => 13,
+                'Call to an undefined method test\PhpStaticAnalysis\PHPStanExtension\data\Method\InvalidClassMethodAttribute::badFunction().' => 31,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }

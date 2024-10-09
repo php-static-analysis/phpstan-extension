@@ -18,12 +18,21 @@ class RequireImplementsAttributeTest extends BaseAttributeTestCase
     {
         $errors = $this->analyse(__DIR__ . '/data/RequireImplements/InvalidTraitRequireImplementsAttribute.php');
 
-        $expectedErrors = [
-            'PHPDoc tag @phpstan-require-implements has invalid value (): Unexpected token "\n ", expected type at offset 34' => 7,
-            'Parameter #1 ...$interfaces of attribute class PhpStaticAnalysis\Attributes\RequireImplements constructor expects string, int given.' => 7,
-            'PHPDoc tag @phpstan-require-implements contains non-object type int.' => 12,
-            'Attribute class PhpStaticAnalysis\Attributes\RequireImplements does not have the property target.' => 15,
-        ];
+        if (self::getPhpStanVersion() < '2') {
+            $expectedErrors = [
+                'PHPDoc tag @phpstan-require-implements has invalid value (): Unexpected token "\n ", expected type at offset 34' => 7,
+                'Parameter #1 ...$interfaces of attribute class PhpStaticAnalysis\Attributes\RequireImplements constructor expects string, int given.' => 7,
+                'PHPDoc tag @phpstan-require-implements contains non-object type int.' => 12,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireImplements does not have the property target.' => 15,
+            ];
+        } else {
+            $expectedErrors = [
+                'Parameter #1 ...$interfaces of attribute class PhpStaticAnalysis\Attributes\RequireImplements constructor expects string, int given.' => 7,
+                'PHPDoc tag @phpstan-require-implements has invalid value (): Unexpected token "\n ", expected type at offset 34 on line 2' => 8,
+                'PHPDoc tag @phpstan-require-implements contains non-object type int.' => 12,
+                'Attribute class PhpStaticAnalysis\Attributes\RequireImplements does not have the property target.' => 15,
+            ];
+        }
 
         $this->checkExpectedErrors($errors, $expectedErrors);
     }
