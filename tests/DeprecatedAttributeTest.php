@@ -42,7 +42,7 @@ class DeprecatedAttributeTest extends BaseAttributeTestCase
         $this->assertCount(0, $errors);
     }
 
-    public function testProperyDeprecatedAttribute(): void
+    public function testPropertyDeprecatedAttribute(): void
     {
         $errors = $this->analyse(__DIR__ . '/data/Deprecated/PropertyDeprecatedAttribute.php');
         $this->assertCount(0, $errors);
