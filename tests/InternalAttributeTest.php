@@ -34,7 +34,7 @@ class InternalAttributeTest extends BaseAttributeTestCase
         $this->assertCount(0, $errors);
     }
 
-    public function testProperyInternalAttribute(): void
+    public function testPropertyInternalAttribute(): void
     {
         $errors = $this->analyse(__DIR__ . '/data/Internal/PropertyInternalAttribute.php');
         $this->assertCount(0, $errors);
