@@ -24,17 +24,17 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
-        "php-static-analysis/attributes": "^0.4.0 || dev-main",
-        "php-static-analysis/node-visitor": "^0.4.0 || dev-main",
+        "php-static-analysis/attributes": "^0.4.1 || dev-main",
+        "php-static-analysis/node-visitor": "^0.4.1 || dev-main",
         "phpstan/phpstan": "^2.0",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
-        "php-static-analysis/psalm-plugin": "^0.4.0 || dev-main",
+        "php-static-analysis/psalm-plugin": "^0.4.1 || dev-main",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpunit/phpunit": "^9.0",
         "symplify/easy-coding-standard": "^12.1",
-        "vimeo/psalm": "dev-master"
+        "vimeo/psalm": "^6"
     },
     "extra": {
         "phpstan": {
