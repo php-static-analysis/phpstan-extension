@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class DeprecatedAttributeTest extends BaseAttributeTestCase
+final class DeprecatedAttributeTest extends BaseAttributeTestCase
 {
     public function testClassDeprecatedAttribute(): void
     {

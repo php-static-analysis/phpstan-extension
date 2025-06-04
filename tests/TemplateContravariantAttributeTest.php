@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class TemplateContravariantAttributeTest extends BaseAttributeTestCase
+final class TemplateContravariantAttributeTest extends BaseAttributeTestCase
 {
     public function testClassTemplateContravariantAttribute(): void
     {

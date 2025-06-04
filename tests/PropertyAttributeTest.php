@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class PropertyAttributeTest extends BaseAttributeTestCase
+final class PropertyAttributeTest extends BaseAttributeTestCase
 {
     public function testClassPropertyAttribute(): void
     {
