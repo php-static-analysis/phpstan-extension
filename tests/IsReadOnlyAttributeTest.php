@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class IsReadOnlyAttributeTest extends BaseAttributeTestCase
+final class IsReadOnlyAttributeTest extends BaseAttributeTestCase
 {
     public function testPropertyTypeAttribute(): void
     {

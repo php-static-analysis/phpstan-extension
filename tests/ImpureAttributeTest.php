@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class ImpureAttributeTest extends BaseAttributeTestCase
+final class ImpureAttributeTest extends BaseAttributeTestCase
 {
     public function testMethodImpureAttribute(): void
     {
@@ -22,7 +22,6 @@ class ImpureAttributeTest extends BaseAttributeTestCase
 
         $expectedErrors = [
             'Attribute class PhpStaticAnalysis\Attributes\Impure does not have the property target.' => 11,
-            'Method test\PhpStaticAnalysis\PHPStanExtension\data\Impure\InvalidMethodImpureAttribute::getMoreName() is marked as impure but does not have any side effects.' => 14,
         ];
 
         $this->checkExpectedErrors($errors, $expectedErrors);

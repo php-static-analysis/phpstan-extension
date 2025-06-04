@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class RequireExtendsAttributeTest extends BaseAttributeTestCase
+final class RequireExtendsAttributeTest extends BaseAttributeTestCase
 {
     public function testClassRequireExtendsAttribute(): void
     {

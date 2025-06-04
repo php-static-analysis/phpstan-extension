@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class MixinAttributeTest extends BaseAttributeTestCase
+final class MixinAttributeTest extends BaseAttributeTestCase
 {
     public function testClassMixinAttribute(): void
     {

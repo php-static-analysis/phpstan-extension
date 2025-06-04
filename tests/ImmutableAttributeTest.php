@@ -3,7 +3,7 @@
 
 use test\PhpStaticAnalysis\PHPStanExtension\BaseAttributeTestCase;
 
-class ImmutableAttributeTest extends BaseAttributeTestCase
+final class ImmutableAttributeTest extends BaseAttributeTestCase
 {
     public function testClassImmutableAttribute(): void
     {

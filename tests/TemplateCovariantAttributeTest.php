@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class TemplateCovariantAttributeTest extends BaseAttributeTestCase
+final class TemplateCovariantAttributeTest extends BaseAttributeTestCase
 {
     public function testClassTemplateCovariantAttribute(): void
     {

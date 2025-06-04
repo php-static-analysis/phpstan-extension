@@ -12,7 +12,7 @@ use PhpStaticAnalysis\Attributes\Returns;
 use PhpStaticAnalysis\NodeVisitor\AttributeNodeVisitor;
 use Webmozart\Assert\Assert;
 
-class AttributeParser implements Parser
+final class AttributeParser implements Parser
 {
     public function __construct(
         private Parser $parser

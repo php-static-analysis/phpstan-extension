@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class InternalAttributeTest extends BaseAttributeTestCase
+final class InternalAttributeTest extends BaseAttributeTestCase
 {
     public function testClassInternalAttribute(): void
     {

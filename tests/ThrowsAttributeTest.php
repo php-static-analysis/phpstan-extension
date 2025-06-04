@@ -2,7 +2,7 @@
 
 namespace test\PhpStaticAnalysis\PHPStanExtension;
 
-class ThrowsAttributeTest extends BaseAttributeTestCase
+final class ThrowsAttributeTest extends BaseAttributeTestCase
 {
     public function testMethodThrowsAttribute(): void
     {

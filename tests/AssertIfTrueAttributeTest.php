@@ -3,7 +3,7 @@
 
 use test\PhpStaticAnalysis\PHPStanExtension\BaseAttributeTestCase;
 
-class AssertIfTrueAttributeTest extends BaseAttributeTestCase
+final class AssertIfTrueAttributeTest extends BaseAttributeTestCase
 {
     public function testMethodAssertIfTrueAttribute(): void
     {
